@@ -9,7 +9,8 @@ import UIKit
 
 
 enum ApiEndPoint: String {
-    case weatherForecast = "/2.5/weather"
+    case weather = "weather"
+    case forecast = "forecast"
 }
 
 struct ApiRouter {
@@ -53,9 +54,11 @@ class NetworkService {
             if let responseData = data, let httpResponse = response as? HTTPURLResponse, httpResponse.statusCode == 200 {
                 success(responseData)
                 let responseString = String(data: responseData, encoding: .utf8)
+                
                 print("responseString = \(responseString!)")
+                
             } else if let resonseError = error {
-                    failure(resonseError)
+                failure(resonseError)
             }
         }.resume()
     }

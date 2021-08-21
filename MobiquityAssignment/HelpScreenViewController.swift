@@ -6,12 +6,18 @@
 //
 
 import UIKit
+import WebKit
 
 class HelpScreenViewController: UIViewController {
 
+    @IBOutlet weak var webView: WKWebView!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        if let pdf = Bundle.main.url(forResource: "appInfo", withExtension: "pdf", subdirectory: nil, localization: nil)  {
+            let req = NSURLRequest(url: pdf)
+            self.webView.load(req as URLRequest)
+          }
         // Do any additional setup after loading the view.
     }
     

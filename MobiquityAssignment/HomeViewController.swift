@@ -8,8 +8,10 @@
 import UIKit
 
 class HomeViewController: UIViewController {
+    
     @IBOutlet weak var tableViewOutlet: UITableView!
     @IBOutlet weak var searchBarOutlet: UISearchBar!
+    
     let homeViewModel = HomeViewModel()
     var searchAddressArray = [Location](){
         didSet{
@@ -52,10 +54,8 @@ extension HomeViewController: UITableViewDelegate{
 extension HomeViewController: CellSubclassDelegate{
     func buttonTapped(cell: AddressTableViewCell) {
         guard let indexPath = self.tableViewOutlet.indexPath(for: cell) else {return}
-        self.searchAddressArray = DatabaseHelper.shareInstance.deleteData(index: indexPath.row)
+        self.searchAddressArray = DatabaseHelper.shareInstance.deleteData(getLocation: self.searchAddressArray[indexPath.row]) ?? []
     }
-    
-    
 }
 extension HomeViewController:UISearchBarDelegate{
     func searchBar(_ searchBar: UISearchBar, textDidChange searchText: String) {

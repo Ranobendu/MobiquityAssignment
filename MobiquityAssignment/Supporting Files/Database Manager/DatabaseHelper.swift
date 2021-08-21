@@ -37,10 +37,21 @@ class DatabaseHelper {
         return location
     }
     
-    func deleteData(index:Int) -> [Location]{
-        var location = getLocationData()
-        context?.delete(location[index])
-        location.remove(at: index)
+    func getLastData(_ address: String) -> Location? {
+        var location = [Location]()
+        let fetchRequest = NSFetchRequest<NSManagedObject>(entityName: "Location")
+        fetchRequest.predicate = NSPredicate(format: "address == %@", address)
+        do {
+            location = try context?.fetch(fetchRequest) as! [Location]
+        } catch {
+            print("can not get data")
+        }
+        return location.last
+    }
+    
+    func deleteData(getLocation:Location) -> [Location]?{
+        context?.delete(getLocation)
+        let location = getLocationData()
         do {
             try context?.save()
         } catch {

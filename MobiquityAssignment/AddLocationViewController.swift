@@ -35,6 +35,8 @@ class AddLocationViewController: UIViewController {
         manager.startUpdatingLocation()
         
     }
+    
+    //MARK:  Add Annotation On Mapview  
     @objc func addWaypoint(tapGesture: UIGestureRecognizer) {
 
         let touchPoint = tapGesture.location(in: mapView)
@@ -49,12 +51,16 @@ class AddLocationViewController: UIViewController {
         self.selectedLongitude = "\(location.coordinate.longitude)"
     }
     
+    //MARK:  Done Button action  
+    
     @IBAction func doneButtonAction(_ sender: Any) {
         let dict: [String:String] = ["address":self.selectedAddress,"latitude":self.selectedLatitude,"longitude":self.selectedLongitude]
         print(dict)
         DatabaseHelper.shareInstance.save(object: dict)
         self.navigationController?.popViewController(animated: true)
     }
+    
+    //MARK:  Map view render  
     
     func render(_ location:CLLocation){
         let coordinate = CLLocationCoordinate2D(latitude: location.coordinate.latitude, longitude: location.coordinate.longitude)
@@ -66,6 +72,8 @@ class AddLocationViewController: UIViewController {
         pin.coordinate = coordinate
         self.mapView.addAnnotation(pin)
     }
+    
+    //MARK:  Fetch Address fUsing Reverse Geocode 
     
     func fetchAddress(location:CLLocation){
         geocoder.reverseGeocodeLocation(location, completionHandler: {(placemarks, error) in

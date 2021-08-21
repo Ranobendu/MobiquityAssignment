@@ -8,7 +8,7 @@
 import Foundation
 
 enum ApiConstant: String {
-    case baseUrl = "https://api.openweathermap.org/data"
+    case baseUrl = "https://api.openweathermap.org/data/2.5/"
     case apiKey = "258b5528175c3cd60e5a3c358423bacb"
     case contentType = "Application/json"
 }

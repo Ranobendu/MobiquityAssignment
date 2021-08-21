@@ -7,11 +7,27 @@
 
 import Foundation
 
-class NetworkManager {
-    class func fetchWaetherData(for model: WeatherRequest, success:@escaping (Data) -> Void, failure:@escaping (Error) -> Void ) {
+
+protocol APIServiceProtocol {
+    func fetchWaetherData(for model: WeatherRequest, success:@escaping (Data) -> Void, failure:@escaping (Error) -> Void )
+    
+    func fetchForecastData(for model: WeatherRequest, success:@escaping (Data) -> Void, failure:@escaping (Error) -> Void )
+    
+}
+class NetworkManager: APIServiceProtocol {
+    
+    static let sharedInstance = NetworkManager()
+    
+    func fetchWaetherData(for model: WeatherRequest, success:@escaping (Data) -> Void, failure:@escaping (Error) -> Void ) {
         guard let params = model.dictionary else {return}
-//                ["lat": lat, "long": long, "exclude": foreCastType.rawValue]
-        let router = ApiRouter(endPoint: .weatherForecast, params: params)
+        let router = ApiRouter(endPoint: .weather, params: params)
+        guard let request = router.asUrlRequest() else {return}
+        NetworkService.request(request, success: success, failure: failure)
+    }
+    
+    func fetchForecastData(for model: WeatherRequest, success:@escaping (Data) -> Void, failure:@escaping (Error) -> Void ) {
+        guard let params = model.dictionary else {return}
+        let router = ApiRouter(endPoint: .forecast, params: params)
         guard let request = router.asUrlRequest() else {return}
         NetworkService.request(request, success: success, failure: failure)
     }

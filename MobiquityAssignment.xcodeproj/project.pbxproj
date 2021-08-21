@@ -7,6 +7,10 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		0427E7BA26CE5D7B00BD0B43 /* ForecastCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0427E7B926CE5D7B00BD0B43 /* ForecastCollectionViewCell.swift */; };
+		0465D28226CD4479003D1D1F /* WeatherForecastModelClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0465D28126CD4479003D1D1F /* WeatherForecastModelClass.swift */; };
+		047434F526D0148D00989458 /* appInfo.pdf in Resources */ = {isa = PBXBuildFile; fileRef = 047434F426D0148D00989458 /* appInfo.pdf */; };
+		047434FB26D0226F00989458 /* MockApiClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = 047434FA26D0226F00989458 /* MockApiClient.swift */; };
 		047E39BB26CA2C60003D52EA /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 047E39BA26CA2C60003D52EA /* AppDelegate.swift */; };
 		047E39BD26CA2C60003D52EA /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 047E39BC26CA2C60003D52EA /* SceneDelegate.swift */; };
 		047E39BF26CA2C60003D52EA /* AddLocationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 047E39BE26CA2C60003D52EA /* AddLocationViewController.swift */; };
@@ -26,12 +30,12 @@
 		047E39FE26CA8018003D52EA /* Service.swift in Sources */ = {isa = PBXBuildFile; fileRef = 047E39FD26CA8018003D52EA /* Service.swift */; };
 		047E3A0126CA958C003D52EA /* CurrentWeatherModelClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 047E3A0026CA958C003D52EA /* CurrentWeatherModelClass.swift */; };
 		047E3A0526CA9C32003D52EA /* CurrentWeatherViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 047E3A0426CA9C32003D52EA /* CurrentWeatherViewModel.swift */; };
+		04C494D026CD7BFF002EA64F /* Observable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04C494CF26CD7BFF002EA64F /* Observable.swift */; };
 		04F4DF1426CB94F600241E19 /* GlobalMethod.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04F4DF1326CB94F600241E19 /* GlobalMethod.swift */; };
 		04F4DF1626CB956900241E19 /* Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04F4DF1526CB956900241E19 /* Extension.swift */; };
 		04F4DF1826CBA18400241E19 /* HelpScreenViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04F4DF1726CBA18400241E19 /* HelpScreenViewController.swift */; };
 		13BDAC0A26CAFC7F00CE6498 /* CityScreenViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 13BDAC0926CAFC7F00CE6498 /* CityScreenViewModel.swift */; };
 		13EB288E26CAD79900615226 /* HomeViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 13EB288D26CAD79900615226 /* HomeViewModel.swift */; };
-		13EB289326CADA6700615226 /* BaseViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 13EB289226CADA6700615226 /* BaseViewModel.swift */; };
 		13EB289926CAEA6500615226 /* Enum.swift in Sources */ = {isa = PBXBuildFile; fileRef = 13EB289826CAEA6500615226 /* Enum.swift */; };
 		13EB289E26CAEC5200615226 /* NetworkManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 13EB289D26CAEC5200615226 /* NetworkManager.swift */; };
 /* End PBXBuildFile section */
@@ -54,6 +58,10 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		0427E7B926CE5D7B00BD0B43 /* ForecastCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ForecastCollectionViewCell.swift; sourceTree = "<group>"; };
+		0465D28126CD4479003D1D1F /* WeatherForecastModelClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WeatherForecastModelClass.swift; sourceTree = "<group>"; };
+		047434F426D0148D00989458 /* appInfo.pdf */ = {isa = PBXFileReference; lastKnownFileType = image.pdf; path = appInfo.pdf; sourceTree = "<group>"; };
+		047434FA26D0226F00989458 /* MockApiClient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockApiClient.swift; sourceTree = "<group>"; };
 		047E39B726CA2C60003D52EA /* MobiquityAssignment.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MobiquityAssignment.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		047E39BA26CA2C60003D52EA /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		047E39BC26CA2C60003D52EA /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -79,12 +87,12 @@
 		047E39FD26CA8018003D52EA /* Service.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Service.swift; sourceTree = "<group>"; };
 		047E3A0026CA958C003D52EA /* CurrentWeatherModelClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CurrentWeatherModelClass.swift; sourceTree = "<group>"; };
 		047E3A0426CA9C32003D52EA /* CurrentWeatherViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CurrentWeatherViewModel.swift; sourceTree = "<group>"; };
+		04C494CF26CD7BFF002EA64F /* Observable.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Observable.swift; sourceTree = "<group>"; };
 		04F4DF1326CB94F600241E19 /* GlobalMethod.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GlobalMethod.swift; sourceTree = "<group>"; };
 		04F4DF1526CB956900241E19 /* Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Extension.swift; sourceTree = "<group>"; };
 		04F4DF1726CBA18400241E19 /* HelpScreenViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HelpScreenViewController.swift; sourceTree = "<group>"; };
 		13BDAC0926CAFC7F00CE6498 /* CityScreenViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CityScreenViewModel.swift; sourceTree = "<group>"; };
 		13EB288D26CAD79900615226 /* HomeViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewModel.swift; sourceTree = "<group>"; };
-		13EB289226CADA6700615226 /* BaseViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseViewModel.swift; sourceTree = "<group>"; };
 		13EB289826CAEA6500615226 /* Enum.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Enum.swift; sourceTree = "<group>"; };
 		13EB289D26CAEC5200615226 /* NetworkManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkManager.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -115,6 +123,39 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		0427E7B626CE5C2E00BD0B43 /* CollectionView Cell */ = {
+			isa = PBXGroup;
+			children = (
+				0427E7B926CE5D7B00BD0B43 /* ForecastCollectionViewCell.swift */,
+			);
+			path = "CollectionView Cell";
+			sourceTree = "<group>";
+		};
+		047434F626D0150800989458 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				047434F426D0148D00989458 /* appInfo.pdf */,
+			);
+			path = Resources;
+			sourceTree = "<group>";
+		};
+		047434F826D0153900989458 /* Helper */ = {
+			isa = PBXGroup;
+			children = (
+				04F4DF1326CB94F600241E19 /* GlobalMethod.swift */,
+				04F4DF1526CB956900241E19 /* Extension.swift */,
+			);
+			path = Helper;
+			sourceTree = "<group>";
+		};
+		047434F926D0223800989458 /* Mocks */ = {
+			isa = PBXGroup;
+			children = (
+				047434FA26D0226F00989458 /* MockApiClient.swift */,
+			);
+			path = Mocks;
+			sourceTree = "<group>";
+		};
 		047E39AE26CA2C60003D52EA = {
 			isa = PBXGroup;
 			children = (
@@ -140,10 +181,10 @@
 			isa = PBXGroup;
 			children = (
 				047E3A0726CAD322003D52EA /* Supporting Files */,
-				047E3A0626CA9DCB003D52EA /* Controller */,
 				047E39FF26CA954E003D52EA /* Model */,
 				047E3A0326CA9BB8003D52EA /* View */,
 				047E3A0226CA9BA4003D52EA /* View Model */,
+				047E3A0626CA9DCB003D52EA /* Controller */,
 				047E39C626CA2C62003D52EA /* Assets.xcassets */,
 				047E39CB26CA2C62003D52EA /* Info.plist */,
 				047E39C326CA2C60003D52EA /* MobiquityAssignment.xcdatamodeld */,
@@ -154,6 +195,7 @@
 		047E39D326CA2C62003D52EA /* MobiquityAssignmentTests */ = {
 			isa = PBXGroup;
 			children = (
+				047434F926D0223800989458 /* Mocks */,
 				047E39D426CA2C62003D52EA /* MobiquityAssignmentTests.swift */,
 				047E39D626CA2C62003D52EA /* Info.plist */,
 			);
@@ -190,6 +232,7 @@
 			isa = PBXGroup;
 			children = (
 				047E3A0026CA958C003D52EA /* CurrentWeatherModelClass.swift */,
+				0465D28126CD4479003D1D1F /* WeatherForecastModelClass.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -199,7 +242,6 @@
 			children = (
 				047E3A0426CA9C32003D52EA /* CurrentWeatherViewModel.swift */,
 				13EB288D26CAD79900615226 /* HomeViewModel.swift */,
-				13EB289226CADA6700615226 /* BaseViewModel.swift */,
 				13BDAC0926CAFC7F00CE6498 /* CityScreenViewModel.swift */,
 			);
 			path = "View Model";
@@ -208,6 +250,7 @@
 		047E3A0326CA9BB8003D52EA /* View */ = {
 			isa = PBXGroup;
 			children = (
+				0427E7B626CE5C2E00BD0B43 /* CollectionView Cell */,
 				047E3A0A26CAD3D7003D52EA /* TableView Cell */,
 				047E39C826CA2C62003D52EA /* LaunchScreen.storyboard */,
 				047E39C026CA2C60003D52EA /* Main.storyboard */,
@@ -229,12 +272,12 @@
 		047E3A0726CAD322003D52EA /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				047434F826D0153900989458 /* Helper */,
+				047434F626D0150800989458 /* Resources */,
 				04F4DF1226CB94A300241E19 /* App Delegate */,
 				13EB289726CAEA4C00615226 /* Utility */,
 				047E3A0926CAD3BA003D52EA /* Database Manager */,
 				047E39FC26CA7FD3003D52EA /* Service */,
-				04F4DF1326CB94F600241E19 /* GlobalMethod.swift */,
-				04F4DF1526CB956900241E19 /* Extension.swift */,
 			);
 			path = "Supporting Files";
 			sourceTree = "<group>";
@@ -269,6 +312,7 @@
 		13EB289726CAEA4C00615226 /* Utility */ = {
 			isa = PBXGroup;
 			children = (
+				04C494CF26CD7BFF002EA64F /* Observable.swift */,
 				13EB289826CAEA6500615226 /* Enum.swift */,
 			);
 			path = Utility;
@@ -377,6 +421,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				047434F526D0148D00989458 /* appInfo.pdf in Resources */,
 				047E39CA26CA2C62003D52EA /* LaunchScreen.storyboard in Resources */,
 				047E39C726CA2C62003D52EA /* Assets.xcassets in Resources */,
 				047E39C226CA2C60003D52EA /* Main.storyboard in Resources */,
@@ -405,6 +450,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				047E39F126CA4C4C003D52EA /* Location+CoreDataClass.swift in Sources */,
+				0427E7BA26CE5D7B00BD0B43 /* ForecastCollectionViewCell.swift in Sources */,
 				047E39F226CA4C4C003D52EA /* Location+CoreDataProperties.swift in Sources */,
 				047E39EE26CA2EB7003D52EA /* HomeViewController.swift in Sources */,
 				047E39FB26CA7DA4003D52EA /* CityScreenViewController.swift in Sources */,
@@ -414,17 +460,18 @@
 				13EB289926CAEA6500615226 /* Enum.swift in Sources */,
 				04F4DF1826CBA18400241E19 /* HelpScreenViewController.swift in Sources */,
 				047E39BF26CA2C60003D52EA /* AddLocationViewController.swift in Sources */,
+				0465D28226CD4479003D1D1F /* WeatherForecastModelClass.swift in Sources */,
 				13BDAC0A26CAFC7F00CE6498 /* CityScreenViewModel.swift in Sources */,
 				047E39F926CA64BF003D52EA /* AddressTableViewCell.swift in Sources */,
 				13EB289E26CAEC5200615226 /* NetworkManager.swift in Sources */,
 				13EB288E26CAD79900615226 /* HomeViewModel.swift in Sources */,
 				047E39FE26CA8018003D52EA /* Service.swift in Sources */,
-				13EB289326CADA6700615226 /* BaseViewModel.swift in Sources */,
 				04F4DF1626CB956900241E19 /* Extension.swift in Sources */,
 				047E39BB26CA2C60003D52EA /* AppDelegate.swift in Sources */,
 				047E39BD26CA2C60003D52EA /* SceneDelegate.swift in Sources */,
 				047E3A0126CA958C003D52EA /* CurrentWeatherModelClass.swift in Sources */,
 				04F4DF1426CB94F600241E19 /* GlobalMethod.swift in Sources */,
+				04C494D026CD7BFF002EA64F /* Observable.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -433,6 +480,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				047E39D526CA2C62003D52EA /* MobiquityAssignmentTests.swift in Sources */,
+				047434FB26D0226F00989458 /* MockApiClient.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -530,7 +578,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 14.5;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
 				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
 				MTL_FAST_MATH = YES;
 				ONLY_ACTIVE_ARCH = YES;
@@ -585,7 +633,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 14.5;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				MTL_FAST_MATH = YES;
 				SDKROOT = iphoneos;
@@ -602,7 +650,7 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				INFOPLIST_FILE = MobiquityAssignment/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 14.1;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -621,7 +669,7 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				INFOPLIST_FILE = MobiquityAssignment/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 14.1;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -640,7 +688,7 @@
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				CODE_SIGN_STYLE = Automatic;
 				INFOPLIST_FILE = MobiquityAssignmentTests/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 14.5;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -651,6 +699,7 @@
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/MobiquityAssignment.app/MobiquityAssignment";
+				WRAPPER_EXTENSION = xctest;
 			};
 			name = Debug;
 		};
@@ -661,7 +710,7 @@
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				CODE_SIGN_STYLE = Automatic;
 				INFOPLIST_FILE = MobiquityAssignmentTests/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 14.5;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -672,6 +721,7 @@
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/MobiquityAssignment.app/MobiquityAssignment";
+				WRAPPER_EXTENSION = xctest;
 			};
 			name = Release;
 		};

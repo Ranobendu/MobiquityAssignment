@@ -53,12 +53,11 @@ class NetworkService {
             // Success block
             if let responseData = data, let httpResponse = response as? HTTPURLResponse, httpResponse.statusCode == 200 {
                 success(responseData)
-                let responseString = String(data: responseData, encoding: .utf8)
-                
-                print("responseString = \(responseString!)")
                 
             } else if let resonseError = error {
                 failure(resonseError)
+                GlobalMethod.sharedInstance.alertMessage(title: "Alert", message: resonseError.localizedDescription, firstButtonTitle: "Okay") { responseTag in
+                }
             }
         }.resume()
     }

@@ -34,7 +34,11 @@ class AddressTableViewCell: UITableViewCell {
         // Configure the view for the selected state
     }
     @IBAction func deleteButtonAction(_ sender: UIButton) {
-        self.delegate?.buttonTapped(cell: self)
+        GlobalMethod.sharedInstance.alertMessage(title: messageConstant.alert.rawValue, message: messageConstant.deleteCheckMsg.rawValue, firstButtonTitle: messageConstant.delete.rawValue, secondButtonTitle: messageConstant.cancel.rawValue) { response in
+            if response{
+                self.delegate?.buttonTapped(cell: self)
+            }
+        }
     }
 
 }

@@ -14,15 +14,17 @@ class DatabaseHelper {
     static var shareInstance = DatabaseHelper()
     let context = (UIApplication.shared.delegate as? AppDelegate)?.persistentContainer.viewContext
     
-    func save(object:[String:String]){
+    func save(object:[String:String],completion: @escaping(Bool) -> Void){
         let location = NSEntityDescription.insertNewObject(forEntityName: "Location", into: context!) as! Location
         location.address = object["address"]
         location.latitude = object["latitude"]
         location.longitude = object["longitude"]
         do {
             try context?.save()
+            completion(true)
         } catch {
             print("data is not save")
+            completion(false)
         }
     }
     
@@ -54,8 +56,15 @@ class DatabaseHelper {
         let location = getLocationData()
         do {
             try context?.save()
+            GlobalMethod.sharedInstance.alertMessage(title: messageConstant.alert.rawValue, message: messageConstant.deleteMsg.rawValue, firstButtonTitle: messageConstant.okay.rawValue) { response in
+                if response{
+                }
+            }
         } catch {
-            print("can not delete data")
+            GlobalMethod.sharedInstance.alertMessage(title: messageConstant.alert.rawValue, message: messageConstant.notDeleteMsg.rawValue, firstButtonTitle: messageConstant.okay.rawValue) { response in
+                if response{
+                }
+            }
         }
         return location
     }

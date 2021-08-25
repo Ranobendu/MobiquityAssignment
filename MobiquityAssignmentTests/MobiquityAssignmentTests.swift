@@ -38,10 +38,13 @@ class MobiquityAssignmentTests: XCTestCase {
     func test_add_address_usingcoredata() throws {
       let data = ["address":"1 Abc Street","latitude": "34550.0","longitude":"234250.0"]
         
-        DatabaseHelper.shareInstance.save(object: data)
-        let getLocation =  DatabaseHelper.shareInstance.getLastData("1 Abc Street")
-        XCTAssertEqual("1 Abc Street", getLocation?.address)
-        
+       
+        DatabaseHelper.shareInstance.save(object: data) { isSave in
+            if isSave{
+                let getLocation =  DatabaseHelper.shareInstance.getLastData("1 Abc Street")
+                XCTAssertEqual("1 Abc Street", getLocation?.address)
+            }
+        }
     }
     
     func test_delete_address_usingcoredata() throws {
@@ -50,9 +53,15 @@ class MobiquityAssignmentTests: XCTestCase {
         let address3 = ["address":"3 Abc Street","latitude": "34550.0","longitude":"234250.0"]
         
         
-        DatabaseHelper.shareInstance.save(object: address1)
-        DatabaseHelper.shareInstance.save(object: address2)
-        DatabaseHelper.shareInstance.save(object: address3)
+        DatabaseHelper.shareInstance.save(object: address1){ isSave in
+            
+        }
+        DatabaseHelper.shareInstance.save(object: address2){ isSave in
+            
+        }
+        DatabaseHelper.shareInstance.save(object: address3){ isSave in
+            
+        }
         
         let fetchAddress1 = DatabaseHelper.shareInstance.getLastData("1 Abc Street")
         let fetchAddress2 = DatabaseHelper.shareInstance.getLastData("2 Abc Street")

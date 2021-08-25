@@ -17,3 +17,16 @@ enum ForeCastType: String, Codable {
     case hourly = "hourly"
     case daily = "daily"
 }
+
+enum messageConstant: String {
+    case saveMsg = "Address saved successfully"
+    case notSave = "Address not save"
+    case deleteMsg = "Address delete successfully"
+    case notDeleteMsg = "Address can not delete"
+    case deleteCheckMsg = "do you want to delete your this address?"
+    case okay = "Okay"
+    case alert = "Alert"
+    case delete = "Delete"
+    case cancel = "Cancel"
+    case error = "Error"
+}

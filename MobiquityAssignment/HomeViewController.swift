@@ -58,6 +58,7 @@ extension HomeViewController: CellSubclassDelegate{
     }
 }
 extension HomeViewController:UISearchBarDelegate{
+    
     func searchBar(_ searchBar: UISearchBar, textDidChange searchText: String) {
         print(searchText)
         if searchText == ""{

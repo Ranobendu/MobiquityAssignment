@@ -56,8 +56,17 @@ class AddLocationViewController: UIViewController {
     @IBAction func doneButtonAction(_ sender: Any) {
         let dict: [String:String] = ["address":self.selectedAddress,"latitude":self.selectedLatitude,"longitude":self.selectedLongitude]
         print(dict)
-        DatabaseHelper.shareInstance.save(object: dict)
-        self.navigationController?.popViewController(animated: true)
+        DatabaseHelper.shareInstance.save(object: dict) { isSave in
+            if isSave{
+                GlobalMethod.sharedInstance.alertMessage(title: messageConstant.alert.rawValue, message: messageConstant.saveMsg.rawValue, firstButtonTitle: messageConstant.okay.rawValue) { tag in
+                    self.navigationController?.popViewController(animated: true)
+                }
+            }else{
+                GlobalMethod.sharedInstance.alertMessage(title: messageConstant.error.rawValue, message: messageConstant.notSave.rawValue, firstButtonTitle: messageConstant.okay.rawValue) { tag in
+                    
+                }
+            }
+        }
     }
     
     //MARK:  Map view render  

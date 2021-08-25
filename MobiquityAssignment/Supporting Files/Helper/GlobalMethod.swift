@@ -35,6 +35,26 @@ class GlobalMethod: NSObject {
         let date = inFormatter.date(from: inStr)!
         return outFormatter.string(from: date)
     }
+    
+    func alertMessage(title: String? = "", message: String? = "",vc: UIViewController? =  UIApplication.topViewController(), firstButtonTitle: String? = "", secondButtonTitle: String? = "", cancelTitle: String? = "", completion: @escaping(Bool) -> Void) {
+        
+        let controller = UIAlertController.init(title: title, message: message, preferredStyle: .alert)
+        controller.addAction(UIAlertAction.init(title: firstButtonTitle, style: .default, handler: { (alert) in
+            completion(true)
+        }))
+        
+        if secondButtonTitle != ""{
+            controller.addAction(UIAlertAction.init(title: secondButtonTitle, style: .default, handler: { (alert) in
+                completion(false)
+            }))
+        }
+        if cancelTitle != ""{
+            controller.addAction(UIAlertAction.init(title: cancelTitle, style: .cancel, handler: { (alert) in
+                //completion(false)
+            }))
+        }
+        vc?.present(controller, animated: true, completion: nil)
+    }
 }
 
 
